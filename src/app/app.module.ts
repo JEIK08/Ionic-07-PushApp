@@ -4,6 +4,8 @@ import { RouterModule, RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
+import { AuthService } from './modules/auth/services/auth.service';
+
 import { AppComponent } from './app.component';
 
 const ROUTES = RouterModule.forRoot([
@@ -21,6 +23,7 @@ const ROUTES = RouterModule.forRoot([
 		ROUTES
 	],
 	providers: [
+		AuthService,
 		{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
 	],
 	bootstrap: [
