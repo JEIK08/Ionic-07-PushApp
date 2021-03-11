@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+	production: false,
+	API_URL: 'https://api.dev.bouwmapp.unravel.works/api/v1',
+	ACCESS_TOKEN: 'wC9Zrvi8Qwfn4h8FEzCWS5efFLJG',
+	firebaseDatabase: 'das-bouwmapp-dev',
+	firebase: {
+		apiKey: 'AIzaSyAH03ccqdxPUEhxRenp8FQCs6c9OUy-X48',
+		authDomain: 'das-bouwmapp.firebaseapp.com',
+		databaseURL: 'https://das-bouwmapp.firebaseio.com',
+		projectId: 'das-bouwmapp',
+		storageBucket: 'das-bouwmapp.appspot.com',
+		messagingSenderId: '958807982319',
+		appId: '1:958807982319:web:07d6b5bc4de8430f6f9b1a'
+	}
 };
 
 /*
