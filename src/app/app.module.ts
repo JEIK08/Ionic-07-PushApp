@@ -12,8 +12,8 @@ import { AppComponent } from './app.component';
 
 const ROUTES = RouterModule.forRoot([
 	{ path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
-	{ path: '', loadChildren: () => import('./modules/portal/portal.module').then(m => m.PortalModule) },
-	{ path: '**', redirectTo: '', pathMatch: 'full' }
+	{ path: 'portal', loadChildren: () => import('./modules/portal/portal.module').then(m => m.PortalModule) },
+	{ path: '**', redirectTo: 'auth', pathMatch: 'full' }
 ]);
 
 @NgModule({

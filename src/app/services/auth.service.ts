@@ -20,4 +20,8 @@ export class AuthService {
 		});
 	}
 
+	registerToken(device_token: string) {
+		return this.http.post(`/user-add-device-token`, { device_token });
+	}
+
 }

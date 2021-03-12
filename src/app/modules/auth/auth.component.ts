@@ -28,9 +28,9 @@ export class AuthComponent  {
 	onSubmit() {
 		if (this.form.invalid) return;
 
-		this.loading = true;
+		// this.loading = true;
 		this.authService.logIn(this.form.value).then(() => {
-			this.router.navigate(['']);
+			this.router.navigate(['portal']);
 		});
 	}
 

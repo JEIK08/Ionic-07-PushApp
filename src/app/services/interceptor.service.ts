@@ -15,13 +15,13 @@ export class InterceptorService implements HttpInterceptor {
 		if (localStorage.getItem('bouw-tk')) {
 			headers = request.headers
 				.append('Authorization', 'Bearer ' + localStorage.getItem('bouw-tk'))
-				.append('x-refresh-token', 'Bearer ' + localStorage.getItem('bouw-refresh-tk'));
+				.append('x-refresh-token', localStorage.getItem('bouw-refresh-tk'));
 		} else {
 			headers = request.headers.append('x-access-token', environment.ACCESS_TOKEN);
 		}
 
 		request = request.clone({
-			url: environment.API_URL += request.url,
+			url: environment.API_URL + request.url,
 			headers
 		});
 
