@@ -24,7 +24,7 @@ export class PortalComponent {
 		this.pushPlugin = Plugins.PushNotifications;
 
 		this.pushPlugin.requestPermission().then((response: NotificationPermissionResponse) => {
-			console.log('requestPermissions()', response);
+			console.log('requestPermissions', response);
 			if (response.granted) {
 				// Register with Apple / Google to receive push via APNS/FCM
 				this.pushPlugin.register();
